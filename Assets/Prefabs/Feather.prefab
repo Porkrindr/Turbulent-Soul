@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 374174080}
   - component: {fileID: 374174084}
   - component: {fileID: 374174083}
-  - component: {fileID: 8481731850817082273}
   m_Layer: 0
   m_Name: Sphere-Outline
   m_TagString: StageObject
@@ -83,18 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8481731850817082273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374174079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b6d2db9cf62edc459dd4318f0fb1833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3956800378047289460
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +95,6 @@ GameObject:
   - component: {fileID: 6063078676644595120}
   - component: {fileID: 3723459041832601079}
   - component: {fileID: 986050674}
-  - component: {fileID: 2105482594708435432}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: StageObject
@@ -206,18 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levitationAmt: 1
---- !u!114 &2105482594708435432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3956800378047289460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b6d2db9cf62edc459dd4318f0fb1833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  goodPoints: 0
 --- !u!1 &7827952532309765762
 GameObject:
   m_ObjectHideFlags: 0

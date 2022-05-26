@@ -21,19 +21,19 @@ public class PlayerController : MonoBehaviour
     {
         if (isPlaying)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 playerMovement.MoveForward(moveDist);
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
                 playerMovement.MoveBack(moveDist);
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 playerMovement.MoveRight(moveDist);
             }
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 playerMovement.MoveLeft(moveDist);
             }

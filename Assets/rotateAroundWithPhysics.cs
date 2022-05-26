@@ -6,10 +6,13 @@ public class rotateAroundWithPhysics : MonoBehaviour
 {
     private GameObject rotationPoint;
     private Rigidbody rb;
-    public float speed;
+    private float speed;
+    private GameManager gameManager;
+    private int activeStage;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("Canvas").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody>();
         rotationPoint = GameObject.FindGameObjectWithTag("Eye");
     }
@@ -19,5 +22,10 @@ public class rotateAroundWithPhysics : MonoBehaviour
     {
         rb.AddTorque(rotationPoint.transform.up * -speed);
         rb.maxAngularVelocity = .2f;
+    }
+    private void Update()
+    {
+        activeStage = gameManager.activeStage;
+        speed = gameManager.stage[activeStage].rotationSpeed;
     }
 }

@@ -25,47 +25,36 @@ public class PlayerMovement : MonoBehaviour
     {
 
             if (transform.rotation != Quaternion.Euler(forwardRot))
-            {
+            
                 transform.rotation = Quaternion.Euler(forwardRot);
-            }
-            else
-            {
-                transform.position += Vector3.forward * moveDist;
-            }
+            
+                transform.position += Vector3.forward * moveDist * Time.deltaTime;
+            
     }
     public void MoveBack(float moveDist) { 
-            if (transform.rotation != Quaternion.Euler(backRot))
-            {
+
                 transform.rotation = Quaternion.Euler(backRot);
-            }
-            else
-            {
-                transform.position += Vector3.back * moveDist;
-            }
+
+                transform.position += Vector3.back * moveDist*Time.deltaTime;
+
     }
 
     public void MoveRight(float moveDist)
     {
-            if (transform.rotation != Quaternion.Euler(rightRot))
-            {
+
                 transform.rotation = Quaternion.Euler(rightRot);
-            }
-            else
-            {
-                transform.position += Vector3.right * moveDist;
-            }
+
+                transform.position += Vector3.right * moveDist * Time.deltaTime;
+
     }
 
     public void MoveLeft(float moveDist)
     {
-            if (transform.rotation != Quaternion.Euler(leftRot))
-            {
+
                 transform.rotation = Quaternion.Euler(leftRot);
-            }
-            else
-            {
-                transform.position += Vector3.left * moveDist;
-            }
+         
+                transform.position += Vector3.left * moveDist* Time.deltaTime;
+    
     }
     public void Boost(float boostDist, float boostCooldown)
     {

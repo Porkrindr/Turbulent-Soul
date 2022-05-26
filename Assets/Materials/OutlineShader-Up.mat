@@ -33,7 +33,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ScaleFactor: 0.08
+    - _ScaleFactor: 0.05
     m_Colors:
     - _OutlineColorDown: {r: 1, g: 0, b: 0, a: 0}
     - _OutlineColorUp: {r: 1, g: 0.9896069, b: 0, a: 0}
