@@ -6,11 +6,7 @@ using UnityEngine.SceneManagement;
 public class pauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public static bool isGameOver = false;
     public GameObject pauseMenuUI;
-    public GameObject gameoverMenuUI;
-    public static bool levelComplete = false;
-    public GameObject levelCompleteMenu;
     private PlayerController playerController;
 
     private void Start()
@@ -22,52 +18,34 @@ public class pauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGameOver)
-        {
-            GameOver();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
-            else
-            {
-                Pause();
-            }
-        }
-        if (levelComplete)
-        {
-            Complete();
-        }
     }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        levelCompleteMenu.SetActive(false);
         Time.timeScale = 1f;
         playerController.isPlaying = true;
         GameIsPaused = false;
-        isGameOver = false;
-        levelComplete = false;
     }
 
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
         GameIsPaused = true;
-    }
-    public void GameOver()
-    {
         Time.timeScale = 0f;
-        gameoverMenuUI.SetActive(true);
+
     }
-
-
     public void Restart()
     {
         Time.timeScale = 1f;
@@ -80,9 +58,6 @@ public class pauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("Loading Menu");
         SceneManager.LoadScene(0);
-        isGameOver = false;
-        levelComplete = false;
-      
     }
 
     public void Quit()
@@ -93,7 +68,6 @@ public class pauseMenu : MonoBehaviour
 
     void Complete()
     {
-        levelCompleteMenu.SetActive(true);
         playerController.isPlaying = false;
     }
 

@@ -13,6 +13,13 @@ public class MakeTransparent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.clear);
+        if (pauseMenu.GameIsPaused)
+        {
+            return;
+        }
+        else
+        {
+            gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.clear);
+        }
     }
 }

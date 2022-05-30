@@ -30,53 +30,59 @@ public class levelLightColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        activeStage = gameManager.activeStage;
-        Debug.Log("ACTIVE STAGE: " + activeStage + " Light Color: " + _light.color);
-        if (activeStage == 0)
+        if (pauseMenu.GameIsPaused)
         {
-            _light.color = c0;
-            _light.intensity = 5;
+            return;
         }
-        if(activeStage == 1)
+        else
         {
-            _light.color = c1;
-            _light.intensity = 4;
-        } 
-        if(activeStage == 2)
-        {
-            _light.color = c2;
-            _light.intensity = 3;
-        } 
-        if (activeStage == 3)
-        {
-            _light.color = c3;
-            _light.intensity = 2;
-        }
-        if (activeStage == 4)
-        {
-            //_light.color = Color.HSVToRGB(.44f, .16f, 1.00f);
-            _light.color = c4;
-            _light.intensity = 1;
-        }
-        if (activeStage == 5)
-        {
-            _light.color = c5;
-            _light.intensity = 2;
-        }
-        if (activeStage == 6)
-        {
-            _light.color = c7;
-            _light.intensity = 3;
-        }
-        if (activeStage == 7)
-        {
-            _light.color = c7;
-            _light.intensity = 4;
-        }
-        if (activeStage == 8)
-        {
-            _light.color = c8;
-            _light.intensity = 5;
+            activeStage = gameManager.activeStage;
+            if (activeStage == 0)
+            {
+                _light.color = c0;
+                _light.intensity = 5;
+            }
+            if (activeStage == 1)
+            {
+                _light.color = c1;
+                _light.intensity = 4;
+            }
+            if (activeStage == 2)
+            {
+                _light.color = c2;
+                _light.intensity = 3;
+            }
+            if (activeStage == 3)
+            {
+                _light.color = c3;
+                _light.intensity = 2;
+            }
+            if (activeStage == 4)
+            {
+                //_light.color = Color.HSVToRGB(.44f, .16f, 1.00f);
+                _light.color = c4;
+                _light.intensity = 1;
+            }
+            if (activeStage == 5)
+            {
+                _light.color = c5;
+                _light.intensity = 2;
+            }
+            if (activeStage == 6)
+            {
+                _light.color = c7;
+                _light.intensity = 3;
+            }
+            if (activeStage == 7)
+            {
+                _light.color = c7;
+                _light.intensity = 4;
+            }
+            if (activeStage == 8)
+            {
+                _light.color = c8;
+                _light.intensity = 5;
+            }
         }
 
     }

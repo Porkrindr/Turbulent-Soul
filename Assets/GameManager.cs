@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static int goodPoints;
     public static int goodPointsCollected;
     public StageMovement stageMovement;
+    public AudioSource stageDownSound;
+    public AudioSource stageUpSound;
     [SerializeField]
     private int startStage;
     private GameObject player;
@@ -46,39 +48,50 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        for (int i = 0; i < stage.Length; i++)
+        if (pauseMenu.GameIsPaused)
         {
-            if (stage[i].stageActive && levitation >= stage[i].upGoal)
+            return;
+        }
+        else
+        {
+            Debug.Log(levitation);
+            for (int i = 0; i < stage.Length; i++)
             {
-                if (i + 1 == stage.Length)
+                if (stage[i].stageActive && levitation >= stage[i].upGoal)
                 {
-                    EndingParadise(goodPoints, goodPointsCollected);
+                    if (i + 1 == stage.Length)
+                    {
+                        EndingParadise(goodPoints, goodPointsCollected);
+                    }
+                    else
+                    {
+                        stageUpSound.Play(0);
+                        player.transform.position = new Vector3(0, player.transform.position.y, 0);
+                        stage[i].stageActive = false;
+                        ResetLevitation();
+                        stage[i + 1].stageActive = true;
+                        stage[i + 1].stageObjects.SetActive(true);
+                        activeStage = i + 1;
+                        stageMovement.MoveUp();
+                    }
                 }
-                else
+                else if (stage[i].stageActive && levitation <= stage[i].downGoal)
                 {
-                    player.transform.position = new Vector3(0, player.transform.position.y, 0);
-                    stage[i].stageActive = false;
-                    stage[i + 1].stageActive = true;
-                    stage[i + 1].stageObjects.SetActive(true);
-                    activeStage = i + 1;
-                    stageMovement.MoveUp();
-                }
-            }
-            else if (stage[i].stageActive && levitation <= stage[i].downGoal)
-            {
-                if (i == 0)
-                {
-                    EndingUnderworld(goodPoints, goodPointsCollected);
-                }
-                else
-                {
-                    player.transform.position = new Vector3(0, player.transform.position.y, 0);
-                    stage[i].stageActive = false;
-                    stage[i - 1].stageActive = true;
-                    activeStage = i - 1;
-                    stage[i].stageObjects.SetActive(false);
-                    stageMovement.MoveDown();
+                    if (i == -1)
+                    {
+                        EndingUnderworld(goodPoints, goodPointsCollected);
+                    }
+                    else
+                    {
+                        stageDownSound.Play(0);
+                        player.transform.position = new Vector3(0, player.transform.position.y, 0);
+                        stage[i].stageActive = false;
+                        ResetLevitation();
+                        stage[i - 1].stageActive = true;
+                        activeStage = i - 1;
+                        stage[i].stageObjects.SetActive(false);
+                        stageMovement.MoveDown();
+                    }
                 }
             }
         }
@@ -91,7 +104,7 @@ public class GameManager : MonoBehaviour
     void EndingParadise(int good, int total)
     {
         float score = good / total;
-        if(good> 0.8f)
+        if(score> 0.8f && good>1)
         {
             //PerfectEnding()
             Debug.Log("PERFECT ENDING");
@@ -105,7 +118,7 @@ public class GameManager : MonoBehaviour
     } void EndingUnderworld(int good, int total)
     {
         float score = good / total;
-        if(good< 0.2f)
+        if(score < 0.2f)
         {
             //EvilEnding()
             Debug.Log("EVIL ENDING");
@@ -116,6 +129,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("BAD BAD ENDING");
         }
 
+    }
+    private void ResetLevitation()
+    {
+        levitation = 0;
     }
 
 }

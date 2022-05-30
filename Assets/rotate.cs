@@ -10,16 +10,26 @@ public class rotate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (isRotating)
+        {
+            rot = transform.eulerAngles;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isRotating)
+        if (pauseMenu.GameIsPaused)
         {
-            rot += (rotInput);
-            transform.rotation = Quaternion.Euler(rot);
+            return;
+        }
+        else
+        {
+            if (isRotating)
+            {
+                rot += (rotInput);
+                transform.rotation = Quaternion.Euler(rot);
+            }
         }
     }
 }

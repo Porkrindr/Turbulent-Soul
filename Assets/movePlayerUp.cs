@@ -8,6 +8,10 @@ public class movePlayerUp : MonoBehaviour
     public int goodPoints;
     private ParticleSystem levUp;
     private ParticleSystem levDown;
+    public ParticleSystem killedFx;
+    public AudioSource saveAudio;
+    public AudioSource killAudio;
+    public AudioSource possessAudio;
 
     [SerializeField]
     private bool canSave;
@@ -16,6 +20,12 @@ public class movePlayerUp : MonoBehaviour
     [SerializeField]
     private bool isPossessed;
 
+    private void Awake()
+    {
+        saveAudio = GameObject.Find("saveAudio").GetComponent<AudioSource>();
+        killAudio = GameObject.Find("killAudio").GetComponent<AudioSource>();
+        possessAudio = GameObject.Find("possAudio").GetComponent<AudioSource>();
+    }
     private void Start()
     {
         levUp = GameObject.Find("UpParticle").GetComponent<ParticleSystem>();        
@@ -26,27 +36,34 @@ public class movePlayerUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.LevitationUpdate(levitationAmt);
+            if (GameManager.levitation >-5|| GameManager.levitation <5) {
+                GameManager.LevitationUpdate(levitationAmt);
+            }
 
             if (canSave)
             {
+                saveAudio.Play(0);
                 Debug.Log("SAVE ANIMATION");
                 levUp.Play();
                 GameManager.goodPoints += goodPoints;
             }
             if (canKill)
             {
+                killAudio.Play(0);
+                killedFx.Play();
                 Debug.Log("Kill Animation");
                 GameManager.goodPoints -= goodPoints;
             }
 
             if (!isPossessed)
             {
+
                 GameManager.goodPointsCollected++;
                 Destroy(transform.parent.gameObject);
             }
             else
             {
+                possessAudio.Play(0);
                 levDown.Play();
             }
         }

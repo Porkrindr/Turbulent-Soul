@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db729f143fc7de4d9bb912e3965e351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levitationAmt: 2
+  levitationAmt: 1
   goodPoints: 1
   canSave: 1
   canKill: 0
@@ -119,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c85efb4072eb4c540807fb371aba8d24, type: 3}
       propertyPath: m_TagString
       value: StageObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 2223639932434330405, guid: c85efb4072eb4c540807fb371aba8d24, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85efb4072eb4c540807fb371aba8d24, type: 3}

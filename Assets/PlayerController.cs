@@ -6,40 +6,48 @@ public class PlayerController : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     public float moveDist;
-    public float boostDist;
-    public float boostCooldown;
+    public float speed;
+    public float defaultSpeed;
+    public float runSpeed;
     public bool isPlaying;
+    private StageMovement stageMovement;
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         isPlaying = true;
+        stageMovement = GameObject.Find("StageMaster").GetComponent<StageMovement>() ;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlaying)
+
+            if (isPlaying && !stageMovement.isMoving && !pauseMenu.GameIsPaused)
         {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = runSpeed;
+            }
+            else
+            {
+                speed = defaultSpeed;
+            }
             if (Input.GetKey(KeyCode.W))
             {
-                playerMovement.MoveForward(moveDist);
+                playerMovement.MoveForward(moveDist * speed);
             }
             if (Input.GetKey(KeyCode.S))
             {
-                playerMovement.MoveBack(moveDist);
+                playerMovement.MoveBack(moveDist * speed);
             }
             if (Input.GetKey(KeyCode.D))
             {
-                playerMovement.MoveRight(moveDist);
+                playerMovement.MoveRight(moveDist * speed);
             }
             if (Input.GetKey(KeyCode.A))
             {
-                playerMovement.MoveLeft(moveDist);
-            }
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                playerMovement.Boost(boostDist, boostCooldown);
+                playerMovement.MoveLeft(moveDist * speed);
             }
         }
     }

@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5021074713666571620}
-  - component: {fileID: 280303717803805421}
-  - component: {fileID: 5077396886773113641}
   m_Layer: 0
   m_Name: Balloons with Ghost Girl
   m_TagString: StageObject
@@ -27,38 +25,71 @@ Transform:
   m_GameObject: {fileID: 5021074713666571627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
-  - {fileID: 4766156013748619170}
+  - {fileID: 4974580308927261621}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &280303717803805421
+--- !u!1 &5136908990215949517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4974580308927261621}
+  - component: {fileID: 4721275456844014769}
+  - component: {fileID: 5260512243056693278}
+  m_Layer: 0
+  m_Name: ObjectPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4974580308927261621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136908990215949517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4766156013748619170}
+  m_Father: {fileID: 5021074713666571620}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4721275456844014769
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5021074713666571627}
+  m_GameObject: {fileID: 5136908990215949517}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0.82, z: 0}
---- !u!114 &5077396886773113641
+--- !u!114 &5260512243056693278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5021074713666571627}
+  m_GameObject: {fileID: 5136908990215949517}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4db729f143fc7de4d9bb912e3965e351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levitationAmt: 3
+  levitationAmt: 2
   goodPoints: 1
   canSave: 1
   canKill: 0
@@ -68,7 +99,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5021074713666571620}
+    m_TransformParent: {fileID: 4974580308927261621}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17c6226ddcd73af4bbfbcf979e284ed1, type: 3}
       propertyPath: m_RootOrder

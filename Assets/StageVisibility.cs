@@ -54,27 +54,34 @@ public class StageVisibility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isVisible)
+        if (pauseMenu.GameIsPaused)
         {
-            for (int i = 0; i < childTransforms.Count; i++)
-            {
-
-                if (childTransforms[i].GetComponent<MeshRenderer>() != null)
-                {
-                    Debug.Log("Visible");
-                    childTransforms[i].GetComponent<MeshRenderer>().material.SetColor("_Color",Color.clear);
-                }
-            }
+            return;
         }
         else
         {
-            for (int i = 0; i < childTransforms.Count; i++)
+            if (!isVisible)
             {
-
-                if (childTransforms[i].GetComponent<MeshRenderer>() != null)
+                for (int i = 0; i < childTransforms.Count; i++)
                 {
-                    Debug.Log("Not Visible");
-                    childTransforms[i].GetComponent<MeshRenderer>().material.color = originalColor[i];
+
+                    if (childTransforms[i].GetComponent<MeshRenderer>() != null)
+                    {
+                        Debug.Log("Visible");
+                        childTransforms[i].GetComponent<MeshRenderer>().material.SetColor("_Color", Color.clear);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < childTransforms.Count; i++)
+                {
+
+                    if (childTransforms[i].GetComponent<MeshRenderer>() != null)
+                    {
+                        Debug.Log("Not Visible");
+                        childTransforms[i].GetComponent<MeshRenderer>().material.color = originalColor[i];
+                    }
                 }
             }
         }

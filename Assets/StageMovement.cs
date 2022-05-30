@@ -8,25 +8,50 @@ public class StageMovement : MonoBehaviour
     private bool stageUpActive;
     private bool stageDownActive;
     private Vector3 targetStage;
+    public int stageInterval;
+    private Transform player;
+    public Vector3 playerRot;
+    private Vector3 rot;
+    public bool isMoving;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TRANSFOROM MANAGEMENT
-        if (stageUpActive && transform.position !=targetStage)
+        if (pauseMenu.GameIsPaused)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetStage, Time.deltaTime);
-        } else if (stageDownActive && transform.position != targetStage)
+            return;
+        }
+        else
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetStage, Time.deltaTime);
+            //TRANSFOROM MANAGEMENT
+            if (stageUpActive && transform.position != targetStage)
+            {
+                isMoving = true;
+                transform.position = Vector3.MoveTowards(transform.position, targetStage, 2 * Time.deltaTime);
+                rot += playerRot;
+                player.rotation = Quaternion.Euler(rot);
+                player.position = Vector3.zero;
+            }
+            else if (stageDownActive && transform.position != targetStage)
+            {
+                isMoving = true;
+                rot -= playerRot;
+                player.rotation = Quaternion.Euler(rot);
+                player.position = Vector3.zero;
+                transform.position = Vector3.MoveTowards(transform.position, targetStage, 2 * Time.deltaTime);
+            }
+            else
+            {
+                isMoving = false;
+            }
         }
     }
 
@@ -34,12 +59,12 @@ public class StageMovement : MonoBehaviour
     {
         Debug.Log("move up");
         stageUpActive = true;
-        targetStage = new Vector3(transform.position.x, transform.position.y - 2, transform.position.z);
+        targetStage = new Vector3(transform.position.x, transform.position.y - stageInterval, transform.position.z);
 
     }
     public void MoveDown()
     {
         stageDownActive = true;
-        targetStage = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        targetStage = new Vector3(transform.position.x, transform.position.y + stageInterval, transform.position.z);
     }
 }

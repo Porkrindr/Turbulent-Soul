@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float timer = 0;
-
     private Vector3 forwardRot = new Vector3(0, 0, 0);
     private Vector3 backRot = new Vector3(0, 180, 0);
     private Vector3 rightRot = new Vector3(0, 90, 0);
     private Vector3 leftRot = new Vector3(0, 270, 0);
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,12 +55,5 @@ public class PlayerMovement : MonoBehaviour
                 transform.position += Vector3.left * moveDist* Time.deltaTime;
     
     }
-    public void Boost(float boostDist, float boostCooldown)
-    {
-         if(timer <= Time.time)
-        {
-            //transform.position = transform.forward * boostDist;
-            //timer = Time.time + boostCooldown;
-        }
-    }
+
 }

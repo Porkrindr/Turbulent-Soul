@@ -6,13 +6,43 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
+    public GameObject button1, button2;
+    public GameObject text1;
+    public GameObject menuPanel,introPanel;
+    public float appearTime;
+    private float timer;
+    private bool timerComplete;
+    private AudioSource _audio;
+
+
+    private void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+        timer = appearTime + Time.time;
+    }
+    private void Update()
+    {
+        if (timer < Time.time&& !timerComplete)
+        {
+            button1.SetActive(true);
+            button2.SetActive(true);
+        }
+        if (timer + appearTime<Time.time)
+        {
+            text1.SetActive(true);
+
+        }
+    }
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        _audio.Play(0);
+        introPanel.SetActive(true);
+        menuPanel.SetActive(false);
     }
     
     public void ExitGame()
     {
+        _audio.Play(0);
         Debug.Log("Quit");
         Application.Quit();
     }
