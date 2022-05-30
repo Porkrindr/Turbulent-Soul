@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         public bool stageActive;
         public GameObject stageObjects;
         public float rotationSpeed;
+        public GameObject stagePrefab;
     }
     public ElevationStages[] stage;
     // Start is called before the first frame update
@@ -54,7 +55,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(levitation);
             for (int i = 0; i < stage.Length; i++)
             {
                 if (stage[i].stageActive && levitation >= stage[i].upGoal)
@@ -68,9 +68,15 @@ public class GameManager : MonoBehaviour
                         stageUpSound.Play(0);
                         player.transform.position = new Vector3(0, player.transform.position.y, 0);
                         stage[i].stageActive = false;
+
                         ResetLevitation();
                         stage[i + 1].stageActive = true;
                         stage[i + 1].stageObjects.SetActive(true);
+                        if (stage[i + 1].stageObjects.transform.childCount<2)
+                        {
+                            Instantiate(stage[i + 1].stagePrefab, stage[i + 1].stageObjects.transform);
+                        }
+                        Destroy(stage[i].stageObjects.gameObject.transform.GetChild(1).gameObject);
                         activeStage = i + 1;
                         stageMovement.MoveUp();
                     }
@@ -86,10 +92,16 @@ public class GameManager : MonoBehaviour
                         stageDownSound.Play(0);
                         player.transform.position = new Vector3(0, player.transform.position.y, 0);
                         stage[i].stageActive = false;
+
                         ResetLevitation();
                         stage[i - 1].stageActive = true;
+                        if (stage[i - 1].stageObjects.transform.childCount <2)
+                        {
+                            Instantiate(stage[i - 1].stagePrefab, stage[i - 1].stageObjects.transform);
+                        }
                         activeStage = i - 1;
                         stage[i].stageObjects.SetActive(false);
+                        Destroy(stage[i].stageObjects.gameObject.transform.GetChild(1).gameObject);
                         stageMovement.MoveDown();
                     }
                 }

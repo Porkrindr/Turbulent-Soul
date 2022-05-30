@@ -8,6 +8,7 @@ TagManager:
   - Eye
   - StageObject
   - Rock
+  - StagePrefab
   layers:
   - Default
   - TransparentFX
