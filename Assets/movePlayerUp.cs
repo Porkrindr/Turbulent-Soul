@@ -12,6 +12,8 @@ public class movePlayerUp : MonoBehaviour
     public AudioSource saveAudio;
     public AudioSource killAudio;
     public AudioSource possessAudio;
+    public int soulSaver;
+    public int soulTaker;
 
     [SerializeField]
     private bool canSave;
@@ -43,7 +45,6 @@ public class movePlayerUp : MonoBehaviour
             if (canSave)
             {
                 saveAudio.Play(0);
-                Debug.Log("SAVE ANIMATION");
                 levUp.Play();
                 GameManager.goodPoints += goodPoints;
             }
@@ -51,13 +52,13 @@ public class movePlayerUp : MonoBehaviour
             {
                 killAudio.Play(0);
                 killedFx.Play();
-                Debug.Log("Kill Animation");
                 GameManager.goodPoints -= goodPoints;
             }
 
             if (!isPossessed)
             {
-
+                GameManager.soulSaves += soulSaver;
+                GameManager.soulTakes += soulTaker;
                 GameManager.goodPointsCollected++;
                 Destroy(transform.parent.gameObject);
             }

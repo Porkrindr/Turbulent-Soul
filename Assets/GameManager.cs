@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static int levitation;
     public static int goodPoints;
     public static int goodPointsCollected;
+    public static int soulSaves;
+    public static int soulTakes;
     public StageMovement stageMovement;
     public AudioSource stageDownSound;
     public AudioSource stageUpSound;
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (i + 1 == stage.Length)
                     {
-                        EndingParadise(goodPoints, goodPointsCollected);
+                        EndingParadise(soulSaves, soulTakes);
                     }
                     else
                     {
@@ -85,7 +88,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (i == -1)
                     {
-                        EndingUnderworld(goodPoints, goodPointsCollected);
+                        EndingUnderworld(soulSaves, soulTakes);
                     }
                     else
                     {
@@ -113,32 +116,30 @@ public class GameManager : MonoBehaviour
         levitation += amount;
     }
 
-    void EndingParadise(int good, int total)
+    void EndingParadise(int save, int take)
     {
-        float score = good / total;
-        if(score> 0.8f && good>1)
+        if(take> save)
         {
-            //PerfectEnding()
-            Debug.Log("PERFECT ENDING");
+            SceneManager.LoadScene(4);
+        }
+        if(save< 2)
+        {
+            SceneManager.LoadScene(3);
         }
         else
         {
-            //BadGoodEnding();
-            Debug.Log("BAD GOOD ENDING");
+            SceneManager.LoadScene(2);
         }
 
-    } void EndingUnderworld(int good, int total)
+    } void EndingUnderworld(int save, int take)
     {
-        float score = good / total;
-        if(score < 0.2f)
+        if(save >0 || take > 0)
         {
-            //EvilEnding()
-            Debug.Log("EVIL ENDING");
+            SceneManager.LoadScene(6);
         }
         else
         {
-            //BadBadEnding();
-            Debug.Log("BAD BAD ENDING");
+            SceneManager.LoadScene(5);
         }
 
     }

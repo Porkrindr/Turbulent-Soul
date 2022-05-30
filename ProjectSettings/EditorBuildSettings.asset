@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/PerfectEnding.unity
+    guid: 814fac8f7e7c0664b97b2bc8a32e2d75
+  - enabled: 1
+    path: Assets/Scenes/ImperfectEnding.unity
+    guid: 1b74b809284ad2542a7df7bc51ff72db
+  - enabled: 1
+    path: Assets/Scenes/NotGreatEnding.unity
+    guid: bbb217d90888d4d4d8067059f9f48af7
+  - enabled: 1
+    path: Assets/Scenes/MediocreEnding.unity
+    guid: 6bf03579af819a047b198b8598eff1d6
+  - enabled: 1
+    path: Assets/Scenes/WorstEnding.unity
+    guid: 9c2eab24ca7353a42b3ee27185e42f6d
   m_configObjects: {}

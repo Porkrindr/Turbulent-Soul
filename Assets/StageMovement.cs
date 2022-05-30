@@ -57,7 +57,6 @@ public class StageMovement : MonoBehaviour
 
     public void MoveUp()
     {
-        Debug.Log("move up");
         stageUpActive = true;
         targetStage = new Vector3(transform.position.x, transform.position.y - stageInterval, transform.position.z);
 

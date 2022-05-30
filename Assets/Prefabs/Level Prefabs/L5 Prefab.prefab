@@ -107,7 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2082272768, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: rotInput.y
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2156601842375420156, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: m_RootOrder
@@ -254,6 +254,10 @@ PrefabInstance:
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints
       value: -1
       objectReference: {fileID: 0}
@@ -332,6 +336,10 @@ PrefabInstance:
       value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints
       value: -1
       objectReference: {fileID: 0}
@@ -408,6 +416,10 @@ PrefabInstance:
     - target: {fileID: 1768379031422211020, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints
@@ -564,6 +576,10 @@ PrefabInstance:
       value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints
       value: -1
       objectReference: {fileID: 0}
@@ -640,6 +656,10 @@ PrefabInstance:
     - target: {fileID: 1768379031422211020, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints
@@ -720,6 +740,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1306444250755133789}
     m_Modifications:
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints
       value: -1
       objectReference: {fileID: 0}
@@ -796,6 +820,10 @@ PrefabInstance:
     - target: {fileID: 1768379031422211020, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints
@@ -952,6 +980,10 @@ PrefabInstance:
     - target: {fileID: 1768379031422211020, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: goodPoints

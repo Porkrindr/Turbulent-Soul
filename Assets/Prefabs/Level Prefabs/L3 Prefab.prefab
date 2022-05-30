@@ -74,6 +74,8 @@ MonoBehaviour:
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
+  soulSaver: 1
+  soulTaker: 0
   canSave: 1
   canKill: 0
   isPossessed: 0
@@ -178,6 +180,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -267,6 +273,10 @@ PrefabInstance:
     - target: {fileID: 1768379031422211020, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_RootOrder
@@ -358,6 +368,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -447,6 +461,10 @@ PrefabInstance:
     - target: {fileID: 1768379031422211020, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_RootOrder
@@ -670,6 +688,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -739,6 +761,10 @@ PrefabInstance:
     - target: {fileID: 1768379031422211020, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_RootOrder
@@ -983,6 +1009,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 2221701908656724649, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1048,6 +1078,10 @@ PrefabInstance:
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
       value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 96660850519740487, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1502364734920775412, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_LocalPosition.x

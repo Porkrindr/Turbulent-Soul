@@ -181,6 +181,10 @@ PrefabInstance:
       propertyPath: rotInput.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 96660850519740487, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -387,6 +391,10 @@ PrefabInstance:
       propertyPath: rotInput.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 96660850519740487, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -452,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 96660850519740487, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
@@ -519,6 +531,10 @@ PrefabInstance:
       propertyPath: rotInput.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 96660850519740487, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: soulTaker
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -584,6 +600,10 @@ PrefabInstance:
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 96660850519740487, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: soulTaker
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
