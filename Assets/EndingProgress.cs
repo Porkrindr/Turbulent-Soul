@@ -23,7 +23,7 @@ public class EndingProgress : MonoBehaviour
     {
         if (panelNum < panel.Length-1)
         {
-            if (timer < Time.time || Input.GetKeyDown(KeyCode.Return))
+            if (timer < Time.time || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 _audio.Play(0);
                 panel[panelNum].SetActive(false);
@@ -32,12 +32,12 @@ public class EndingProgress : MonoBehaviour
                 timer = panelTime + Time.time;
             }
         }
-        else if((timer<Time.time || Input.GetKeyDown(KeyCode.Return)) && !isIntro)
+        else if((timer<Time.time || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !isIntro)
         {
             _audio.Play(0);
             SceneManager.LoadScene(0);
 
-        } else if((timer<Time.time || Input.GetKeyDown(KeyCode.Return)) && isIntro)
+        } else if((timer<Time.time || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && isIntro)
         {
             _audio.Play(0);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
