@@ -70,6 +70,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 381646297788772936}
     m_Modifications:
+    - target: {fileID: 380506099357583678, guid: 707b8893b0b145146ab6c68b48690bc0, type: 3}
+      propertyPath: levitationAmt
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 454603514510736313, guid: 707b8893b0b145146ab6c68b48690bc0, type: 3}
       propertyPath: m_RootOrder
       value: 0

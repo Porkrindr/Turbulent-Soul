@@ -8,6 +8,8 @@ public class HouseDamage : MonoBehaviour
     public ParticleSystem defeated;
     public GameObject house;
     public int health;
+    private float timer;
+    public float invincibleTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,15 +33,17 @@ public class HouseDamage : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter(Collider other)
+
+    public void TakeDamage()
     {
-        if (other.gameObject.CompareTag("Rock"))
+        if (timer < Time.time)
         {
             if (health > 1)
             {
                 takeDmg.Play();
             }
             health--;
+            timer = Time.time + invincibleTimer;
         }
     }
 }

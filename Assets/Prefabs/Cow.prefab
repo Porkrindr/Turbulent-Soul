@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db729f143fc7de4d9bb912e3965e351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levitationAmt: -1
+  levitationAmt: -2
   goodPoints: -1
   killedFx: {fileID: 2807576718474805693}
   saveAudio: {fileID: 0}

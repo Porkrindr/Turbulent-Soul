@@ -111,6 +111,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3879877929742528316}
     m_Modifications:
+    - target: {fileID: 1779361299805760924, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
+      propertyPath: goodPoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3044145920021771653, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_Name
       value: Balloon
@@ -175,7 +179,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
-      value: 0.8
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
@@ -239,6 +243,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3879877929742528316}
     m_Modifications:
+    - target: {fileID: 1779361299805760924, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
+      propertyPath: goodPoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3044145920021771653, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_Name
       value: Balloon (3)
@@ -301,6 +309,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3879877929742528316}
     m_Modifications:
+    - target: {fileID: 1779361299805760924, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
+      propertyPath: goodPoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2250452712830013304, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.5
@@ -373,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
-      value: 0.8
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
@@ -439,7 +451,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
-      value: 0.8
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
@@ -505,7 +517,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
-      value: 0.8
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
@@ -571,7 +583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: rotInput.y
-      value: 0.8
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
@@ -635,6 +647,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3879877929742528316}
     m_Modifications:
+    - target: {fileID: 1779361299805760924, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
+      propertyPath: goodPoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3044145920021771653, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_Name
       value: Balloon (1)
@@ -704,6 +720,10 @@ PrefabInstance:
     - target: {fileID: 3152286221764904818, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_PlayAutomatically
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595738824210112827, guid: a44447b369f56574895f281793d601dc, type: 3}
+      propertyPath: levitationAmt
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3669983292633224124, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -794,6 +814,10 @@ PrefabInstance:
     - target: {fileID: 381646297788772936, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595738824210112827, guid: a44447b369f56574895f281793d601dc, type: 3}
+      propertyPath: levitationAmt
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145044357029, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: isRotating

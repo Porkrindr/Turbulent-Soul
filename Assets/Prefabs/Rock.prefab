@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8070461193129542062}
   m_Layer: 0
   m_Name: RockLocation
-  m_TagString: Rock
+  m_TagString: StagePrefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +73,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db729f143fc7de4d9bb912e3965e351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levitationAmt: -1
+  levitationAmt: -2
   goodPoints: 0
+  killedFx: {fileID: 0}
+  saveAudio: {fileID: 0}
+  killAudio: {fileID: 0}
+  possessAudio: {fileID: 0}
   canSave: 0
   canKill: 0
   isPossessed: 1
@@ -181,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 73c624ced8e4c924cbd6ab8a359a3a76, type: 3}
       propertyPath: m_TagString
-      value: StageObject
+      value: StagePrefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73c624ced8e4c924cbd6ab8a359a3a76, type: 3}

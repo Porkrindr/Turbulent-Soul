@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class houseMovement : MonoBehaviour
 {
-    [SerializeField]
-    private GameManager gameManager;
-    private Vector3 startPos;
+    public GameObject house;
+    private HouseDamage houseDamage;
     private Transform player;
     private Vector3 currentPos;
     public float targetRange;
@@ -23,15 +22,21 @@ public class houseMovement : MonoBehaviour
     private bool isJustStarting = true;
     private bool started;
     private AudioSource slamAudio;
+    private GameObject stagePrefab;
+    private GameObject[] rocks;
+    private int rockNum;
     // Start is called before the first frame update
     void Start()
     {
+        stagePrefab = transform.parent.gameObject;
         slamAudio = GetComponent<AudioSource>();
-        startPos = transform.position;
-        gameManager = GameObject.Find("Canvas").GetComponent<GameManager>();
+        houseDamage = house.GetComponent<HouseDamage>();
+        currentPos = transform.position;
         player = GameObject.Find("Player").GetComponent<Transform>();
         isRising = true;
-        currentPos = transform.position;
+        rockNum = 0;
+
+
     }
 
     // Update is called once per frame
@@ -44,22 +49,10 @@ public class houseMovement : MonoBehaviour
         else
         {
             transform.position = currentPos;
-            if (gameManager.activeStage == 8)
-            {
-                if (isJustStarting)
-                {
-                    currentPos = Vector3.MoveTowards(currentPos, new Vector3(-4, 0, 10),20* Time.deltaTime);
-                }
-                if (!started && currentPos == new Vector3(-4, 0, 10))
-                {
-                    isJustStarting = false;
-                    started = true;
-                }
-                if (started)
-                {
-                    initiateTimer = Time.time + initiateTime;
-                    if (initiateTimer < Time.time)
-                    {
+
+                   // initiateTimer = Time.time + initiateTime;
+                   // if (initiateTimer < Time.time)
+                   // {
                         if (!isSlamming && transform.position.y > 2)
                         {
                             currentPos = Vector3.MoveTowards(currentPos, new Vector3(player.position.x, currentPos.y, player.position.z), Time.deltaTime * moveSpeed);
@@ -87,13 +80,14 @@ public class houseMovement : MonoBehaviour
                         {
                             isRising = false;
                         }
-                    }
-                }
-                else
+            for (int i = 0; i < rocks.Length; i++)
+            {
+                if (Vector3.Distance(rocks[i].transform.position, currentPos) < 2)
                 {
-                    transform.localPosition = startPos;
+                    houseDamage.TakeDamage();   
                 }
             }
+                  //  }
         }
     }
 }

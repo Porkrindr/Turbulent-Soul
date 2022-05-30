@@ -5,8 +5,6 @@ using UnityEngine;
 public class flyToTargets : MonoBehaviour
 {
     public float moveSpeed;
-    public float rotSpeed;
-    public Transform[] nav;
     private Vector3 startPos;
 
 

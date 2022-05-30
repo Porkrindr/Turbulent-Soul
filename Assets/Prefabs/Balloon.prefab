@@ -26,7 +26,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levitationAmt: 1
-  goodPoints: 1
+  goodPoints: 0
+  killedFx: {fileID: 0}
+  saveAudio: {fileID: 0}
+  killAudio: {fileID: 0}
+  possessAudio: {fileID: 0}
   canSave: 1
   canKill: 0
   isPossessed: 0
