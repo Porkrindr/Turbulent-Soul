@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28085247, g: 0.3660274, b: 0.4983291, a: 1}
+  m_IndirectSpecularColor: {r: 0.28085276, g: 0.36602777, b: 0.49832976, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -609,6 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -1244,6 +1245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -1413,6 +1415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -1539,36 +1542,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea362070f0449fd45b9f6a3160d559f4, type: 3}
---- !u!1 &192583971
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 192583972}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &192583972
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192583971}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2126911378}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &196058840
 Transform:
   m_ObjectHideFlags: 0
@@ -1606,30 +1579,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7639594085329140264, guid: 223d137b2f77bc140967183aaa39f63d, type: 3}
   m_PrefabInstance: {fileID: 547471828}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &221046136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7827952532309765762, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-  m_PrefabInstance: {fileID: 1387000454}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &221046137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
   m_PrefabInstance: {fileID: 1387000454}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &221046138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221046136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bea5ff1aff88454aabd8916b64ca6c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRotating: 1
-  rotInput: {x: 0, y: 3, z: 0}
 --- !u!1001 &221251534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1808,7 +1762,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9631066a5de43f5439389254481cc8c9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2203,6 +2157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -2272,37 +2227,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248790026}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &255935814
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255935815}
-  m_Layer: 0
-  m_Name: Nav 7
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &255935815
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255935814}
-  m_LocalRotation: {x: -0, y: -0.3826835, z: 0, w: -0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1641507254}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: -315, z: 0}
 --- !u!1 &256201371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3792441145577633326, guid: a44447b369f56574895f281793d601dc, type: 3}
@@ -2326,7 +2250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!4 &261693862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 588930938304910237, guid: c91229d27f9a9de4493679bd409f4449, type: 3}
@@ -2629,6 +2553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -2893,22 +2818,22 @@ MonoBehaviour:
     downGoal: -5
     stageActive: 1
     stageObjects: {fileID: 1300169276}
-    rotationSpeed: 1
+    rotationSpeed: 0.2
   - upGoal: 5
     downGoal: -5
     stageActive: 0
     stageObjects: {fileID: 1484054268}
-    rotationSpeed: 1
+    rotationSpeed: 0.4
   - upGoal: 5
     downGoal: -5
     stageActive: 0
     stageObjects: {fileID: 1361506508}
-    rotationSpeed: 3
+    rotationSpeed: 0.8
   - upGoal: 5
     downGoal: -5
     stageActive: 0
     stageObjects: {fileID: 1218168065}
-    rotationSpeed: 0.75
+    rotationSpeed: 0.4
   - upGoal: 5
     downGoal: -5
     stageActive: 0
@@ -3256,7 +3181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145044357029, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: rotInput.y
-      value: 3
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145577633325, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_RootOrder
@@ -3461,7 +3386,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 14f2bd60f4c10d045bcbb4129e07d1cb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3708,37 +3633,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &411695191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 411695192}
-  m_Layer: 0
-  m_Name: Nav 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &411695192
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411695191}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 600076049}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &412203522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4073,7 +3967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145577633325, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145577633325, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4203,37 +4097,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432868847}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &438159194
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 438159195}
-  m_Layer: 0
-  m_Name: Nav 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &438159195
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438159194}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 771108215}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &439109465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4339,6 +4202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -9543,6 +9407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -10219,7 +10084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 2, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!4 &571957619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7639594085329140264, guid: 223d137b2f77bc140967183aaa39f63d, type: 3}
@@ -10248,7 +10113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!4 &577011462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
@@ -15290,36 +15155,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &600076048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 600076049}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &600076049
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600076048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 411695192}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611856395
 GameObject:
   m_ObjectHideFlags: 0
@@ -15678,6 +15513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -15778,36 +15614,6 @@ Transform:
   - {fileID: 1929648224}
   m_Father: {fileID: 611856396}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &649264933
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 649264934}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &649264934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649264933}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1326548237}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &649535607 stripped
 Transform:
@@ -16897,36 +16703,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a44447b369f56574895f281793d601dc, type: 3}
---- !u!1 &771108214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 771108215}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &771108215
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771108214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 438159195}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &772028262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17184,6 +16960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -17519,6 +17296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -18061,36 +17839,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895862969}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &902689008
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 902689009}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &902689009
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902689008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2057116606}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &903030893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d94b3451ab5222443936c58e7fe0c800, type: 3}
@@ -18135,7 +17883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!1 &911563438
 GameObject:
   m_ObjectHideFlags: 0
@@ -18266,30 +18014,11 @@ Transform:
   m_Father: {fileID: 657146394}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &918834316 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7827952532309765762, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-  m_PrefabInstance: {fileID: 1493850086}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &918834317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
   m_PrefabInstance: {fileID: 1493850086}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &918834318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918834316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bea5ff1aff88454aabd8916b64ca6c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRotating: 1
-  rotInput: {x: 0, y: 3, z: 0}
 --- !u!4 &923832413
 Transform:
   m_ObjectHideFlags: 0
@@ -18370,6 +18099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -18569,6 +18299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -18661,7 +18392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!4 &974426102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2966347370126146553, guid: b173dd83df0f9af46b35d7ef5465110b, type: 3}
@@ -18696,7 +18427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18788,6 +18519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -18926,6 +18658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -19294,6 +19027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -19646,7 +19380,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fab4bb7c9ee6ab14fb96d4bd8a6b2262, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -20504,6 +20238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -21098,6 +20833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -21236,6 +20972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -21369,6 +21106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -21547,7 +21285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!1 &1219370787
 GameObject:
   m_ObjectHideFlags: 0
@@ -21602,7 +21340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26801,7 +26539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 2, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!1 &1300169276
 GameObject:
   m_ObjectHideFlags: 0
@@ -26836,7 +26574,6 @@ Transform:
   - {fileID: 1424506637}
   - {fileID: 221046137}
   - {fileID: 1529596328}
-  - {fileID: 1607028300}
   - {fileID: 579929510}
   - {fileID: 1590733974}
   - {fileID: 635499476}
@@ -26919,37 +26656,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea362070f0449fd45b9f6a3160d559f4, type: 3}
---- !u!1 &1326548236
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1326548237}
-  m_Layer: 0
-  m_Name: Nav 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1326548237
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326548236}
-  m_LocalRotation: {x: 0, y: -0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 649264934}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
 --- !u!1 &1326572310
 GameObject:
   m_ObjectHideFlags: 0
@@ -26998,6 +26704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -27115,6 +26822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -27191,6 +26899,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1300169277}
     m_Modifications:
+    - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: isRotating
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: rotInput.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -27629,6 +27345,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1300169277}
     m_Modifications:
+    - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: rotInput.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -27676,63 +27396,6 @@ PrefabInstance:
     - target: {fileID: 7827952532309765762, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_Name
       value: Bird (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
---- !u!1001 &1392044241
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1300169277}
-    m_Modifications:
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.38268325
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9238796
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 225
-      objectReference: {fileID: 0}
-    - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827952532309765762, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-      propertyPath: m_Name
-      value: Bird (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
@@ -27882,37 +27545,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90952b72d695f304994a22ccd6037c17, type: 3}
---- !u!1 &1404555780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1404555781}
-  m_Layer: 0
-  m_Name: Nav 6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1404555781
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404555780}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1424344960}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: -270, z: 0}
 --- !u!1001 &1418088490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28018,6 +27650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -28161,60 +27794,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
---- !u!1 &1424344959
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1424344960}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1424344960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424344959}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1404555781}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1424506636 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7827952532309765762, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-  m_PrefabInstance: {fileID: 1855766936}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1424506637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
   m_PrefabInstance: {fileID: 1855766936}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1424506638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424506636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bea5ff1aff88454aabd8916b64ca6c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRotating: 1
-  rotInput: {x: 0, y: 3, z: 0}
 --- !u!1 &1424617847
 GameObject:
   m_ObjectHideFlags: 0
@@ -28263,6 +27847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -28519,6 +28104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -28787,6 +28373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -28898,14 +28485,6 @@ Transform:
   - {fileID: 2108726014}
   - {fileID: 178485616}
   - {fileID: 2082272765}
-  - {fileID: 1781070105}
-  - {fileID: 438159195}
-  - {fileID: 1326548237}
-  - {fileID: 411695192}
-  - {fileID: 2126911378}
-  - {fileID: 1404555781}
-  - {fileID: 255935815}
-  - {fileID: 2057116606}
   m_Father: {fileID: 244619937}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28932,6 +28511,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1300169277}
     m_Modifications:
+    - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: rotInput.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -29087,6 +28670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -29606,30 +29190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94b3451ab5222443936c58e7fe0c800, type: 3}
---- !u!1 &1529596327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7827952532309765762, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-  m_PrefabInstance: {fileID: 1603689664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1529596328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
   m_PrefabInstance: {fileID: 1603689664}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1529596329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529596327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bea5ff1aff88454aabd8916b64ca6c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRotating: 1
-  rotInput: {x: 0, y: 3, z: 0}
 --- !u!1001 &1530998265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29739,6 +29304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -29873,7 +29439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483090856564558029, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
       propertyPath: rotInput.y
-      value: -3
+      value: -0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
@@ -29900,7 +29466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!4 &1543185582
 Transform:
   m_ObjectHideFlags: 0
@@ -30139,6 +29705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -30220,6 +29787,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1300169277}
     m_Modifications:
+    - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: rotInput.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -30331,30 +29902,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90952b72d695f304994a22ccd6037c17, type: 3}
---- !u!1 &1607028299 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7827952532309765762, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-  m_PrefabInstance: {fileID: 1392044241}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1607028300 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
-  m_PrefabInstance: {fileID: 1392044241}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1607028301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607028299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bea5ff1aff88454aabd8916b64ca6c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRotating: 1
-  rotInput: {x: 0, y: 3, z: 0}
 --- !u!1 &1617409934
 GameObject:
   m_ObjectHideFlags: 0
@@ -30502,7 +30049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483090856564558029, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
       propertyPath: rotInput.y
-      value: -3
+      value: -0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
@@ -30529,7 +30076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: -1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!1 &1630967198
 GameObject:
   m_ObjectHideFlags: 0
@@ -30578,6 +30125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -30668,7 +30216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145044357029, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: rotInput.y
-      value: -3
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145577633325, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_RootOrder
@@ -30720,36 +30268,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a44447b369f56574895f281793d601dc, type: 3}
---- !u!1 &1641507253
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1641507254}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1641507254
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641507253}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 255935815}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1644944016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 743752412671786234, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
@@ -31253,6 +30771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -31431,6 +30950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -31558,6 +31078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -31831,6 +31352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -31980,6 +31502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -32097,6 +31620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -32214,6 +31738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -32299,37 +31824,6 @@ Transform:
   m_Father: {fileID: 611856396}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1781070104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1781070105}
-  m_Layer: 0
-  m_Name: Nav 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1781070105
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781070104}
-  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2138689171}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1 &1782404133
 GameObject:
   m_ObjectHideFlags: 0
@@ -32378,6 +31872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -33613,6 +33108,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1300169277}
     m_Modifications:
+    - target: {fileID: 1095437596, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
+      propertyPath: rotInput.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3029139494408961605, guid: 49c2a8e89bd105e47b365c78ec60f6dc, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -33686,7 +33185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!1001 &1863397480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33752,7 +33251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483090856564558029, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
       propertyPath: rotInput.y
-      value: -3
+      value: -0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
@@ -34358,7 +33857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34450,6 +33949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -34960,7 +34460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483090856564558029, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
       propertyPath: rotInput.y
-      value: -3
+      value: -0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
@@ -35081,7 +34581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 1, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!1001 &1995994305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35198,7 +34698,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8483090856564558029, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 733ecdcd17758cb4f89cdf61c71dd634, type: 3}
 --- !u!1 &2002406589
 GameObject:
@@ -35296,7 +34797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 2, z: 0}
+  rotInput: {x: 0, y: 0.4, z: 0}
 --- !u!1001 &2015550463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35659,6 +35160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -35810,37 +35312,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051177165}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2057116605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2057116606}
-  m_Layer: 0
-  m_Name: Nav 8
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2057116606
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057116605}
-  m_LocalRotation: {x: 0, y: 0, z: -0, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 902689009}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: -360, z: 0}
 --- !u!4 &2065905921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d94b3451ab5222443936c58e7fe0c800, type: 3}
@@ -35931,6 +35402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: -1
   goodPoints: 0
+  killedFx: {fileID: 0}
   saveAudio: {fileID: 0}
   killAudio: {fileID: 0}
   possessAudio: {fileID: 0}
@@ -36372,37 +35844,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2126911377
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2126911378}
-  m_Layer: 0
-  m_Name: Nav 5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2126911378
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126911377}
-  m_LocalRotation: {x: -0, y: -0.9238796, z: 0, w: -0.38268328}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 192583972}
-  m_Father: {fileID: 1484054269}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: -225, z: 0}
 --- !u!4 &2132394622
 Transform:
   m_ObjectHideFlags: 0
@@ -36525,36 +35966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d263bc94a162642a48723440517a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2138689170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2138689171}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2138689171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138689170}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1781070105}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2139585557
 Transform:
   m_ObjectHideFlags: 0
@@ -36881,7 +36292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3990516518007438804, guid: e4fa336c162842842a36251d96a0ca7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36933,41 +36344,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 1484054269}
     m_Modifications:
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
+      propertyPath: rotSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[0]
       value: 
-      objectReference: {fileID: 2138689171}
+      objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[1]
       value: 
-      objectReference: {fileID: 902689009}
+      objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[2]
       value: 
-      objectReference: {fileID: 1641507254}
+      objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[3]
       value: 
-      objectReference: {fileID: 1424344960}
+      objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[4]
       value: 
-      objectReference: {fileID: 192583972}
+      objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[5]
       value: 
-      objectReference: {fileID: 600076049}
+      objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[6]
       value: 
-      objectReference: {fileID: 649264934}
+      objectReference: {fileID: 0}
     - target: {fileID: 2082272766, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: nav.Array.data[7]
       value: 
-      objectReference: {fileID: 771108215}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082272768, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
+      propertyPath: rotInput.y
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2156601842375420156, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -37016,6 +36435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper Airplane
       objectReference: {fileID: 0}
+    - target: {fileID: 8730466664673620539, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
+      propertyPath: levitationAmt
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
 --- !u!1001 &3792441145064944523
@@ -37043,7 +36466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145577633325, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3792441145577633325, guid: a44447b369f56574895f281793d601dc, type: 3}
       propertyPath: m_LocalPosition.x
