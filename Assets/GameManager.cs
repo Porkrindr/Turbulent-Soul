@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static int goodPointsCollected;
     public static int soulSaves;
     public static int soulTakes;
+    public static bool pauseLevity = false;
     public bool isHit;
     public StageMovement stageMovement;
     public AudioSource stageDownSound;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     private int startStage;
     private GameObject player;
     public int activeStage;
+    public GameObject fadeOutPanel;
 
 
     [System.Serializable]
@@ -115,16 +117,24 @@ public class GameManager : MonoBehaviour
     }
     public static void LevitationUpdate(int amount)
     {
-        levitation += amount;
+        if (pauseLevity == false)
+        {
+            levitation += amount;
+        }
+        else
+            return;
     }
 
     void EndingParadise(int save, int take)
     {
-        if(take> save)
+        PauseLevity();
+
+        if (take> save )
         {
+
             SceneManager.LoadScene(4);
         }
-        if(save< 2)
+        if(save< 2 )
         {
             SceneManager.LoadScene(3);
         }
@@ -135,11 +145,13 @@ public class GameManager : MonoBehaviour
 
     } void EndingUnderworld(int save, int take)
     {
-        if(save >0 || take > 0)
+        PauseLevity();
+
+        if ((save >0 || take > 0) )
         {
             SceneManager.LoadScene(6);
         }
-        else
+        else 
         {
             SceneManager.LoadScene(5);
         }
@@ -148,6 +160,14 @@ public class GameManager : MonoBehaviour
     private void ResetLevitation()
     {
         levitation = 0;
+    }
+    public static void PauseLevity()
+    {
+        pauseLevity = true;
+    }
+    public static void UnpauseLevity()
+    {
+        pauseLevity = false;
     }
 
 }

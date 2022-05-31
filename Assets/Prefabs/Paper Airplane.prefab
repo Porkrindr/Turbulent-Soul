@@ -27,6 +27,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 3
   goodPoints: 0
+  killedFx: {fileID: 0}
+  saveAudio: {fileID: 0}
+  killAudio: {fileID: 0}
+  possessAudio: {fileID: 0}
+  soulSaver: 0
+  soulTaker: 0
   canSave: 1
   canKill: 0
   isPossessed: 0
@@ -77,16 +83,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.06
-  rotSpeed: 10
-  nav:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &2082272767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
-  rotInput: {x: 0, y: 0.8, z: 0}
+  rotInput: {x: 0, y: 2, z: 0}
 --- !u!1001 &2156601843306465345
 PrefabInstance:
   m_ObjectHideFlags: 0
