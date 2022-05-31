@@ -17484,7 +17484,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: 1.1681478e-37, z: 9.78048e-39, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -17525,6 +17525,10 @@ PrefabInstance:
     - target: {fileID: 3804858073553112123, guid: d24787ad5df6744418a2a92a299570dc, type: 3}
       propertyPath: m_Name
       value: L3 Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891482977696799548, guid: d24787ad5df6744418a2a92a299570dc, type: 3}
+      propertyPath: spawnDelay
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6517507438987221906, guid: d24787ad5df6744418a2a92a299570dc, type: 3}
       propertyPath: m_RootOrder
@@ -17821,6 +17825,10 @@ PrefabInstance:
     - target: {fileID: 3879877929742528316, guid: 395cf9d78e6247949a057c8c19c102e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772723893817412421, guid: 395cf9d78e6247949a057c8c19c102e7, type: 3}
+      propertyPath: spawnTime
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 395cf9d78e6247949a057c8c19c102e7, type: 3}
