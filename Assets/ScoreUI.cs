@@ -17,6 +17,6 @@ public class ScoreUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = GameManager.levitation.ToString() + "\n \n+5\n \n-5";
+        text.text = GameManager.levitation.ToString() + "\n+5 \n-5";
     }
 }

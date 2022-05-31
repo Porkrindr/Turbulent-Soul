@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static int goodPointsCollected;
     public static int soulSaves;
     public static int soulTakes;
+    public bool isHit;
     public StageMovement stageMovement;
     public AudioSource stageDownSound;
     public AudioSource stageUpSound;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         public GameObject stageObjects;
         public float rotationSpeed;
         public GameObject stagePrefab;
+        public float stageRadius;
     }
     public ElevationStages[] stage;
     // Start is called before the first frame update
@@ -68,44 +70,44 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        stageUpSound.Play(0);
-                        player.transform.position = new Vector3(0, player.transform.position.y, 0);
-                        stage[i].stageActive = false;
-
-                        ResetLevitation();
-                        stage[i + 1].stageActive = true;
                         stage[i + 1].stageObjects.SetActive(true);
-                        if (stage[i + 1].stageObjects.transform.childCount<2)
+                        if (stage[i + 1].stageObjects.transform.childCount < 1)
                         {
                             Instantiate(stage[i + 1].stagePrefab, stage[i + 1].stageObjects.transform);
                         }
-                        Destroy(stage[i].stageObjects.gameObject.transform.GetChild(1).gameObject);
+                        stageUpSound.Play(0);
+                        player.transform.position = new Vector3(0, player.transform.position.y, 0);
+                        stage[i].stageActive = false;
+                        Destroy(stage[i].stageObjects.gameObject.transform.GetChild(0).gameObject);
+                        ResetLevitation();
+                        stage[i + 1].stageActive = true;
+
                         activeStage = i + 1;
                         stageMovement.MoveUp();
+                        stage[i].stageObjects.transform.GetChild(0).gameObject.SetActive(false);
                     }
                 }
                 else if (stage[i].stageActive && levitation <= stage[i].downGoal)
                 {
-                    if (i == -1)
+                    if (i == 0)
                     {
                         EndingUnderworld(soulSaves, soulTakes);
                     }
                     else
                     {
-                        stageDownSound.Play(0);
-                        player.transform.position = new Vector3(0, player.transform.position.y, 0);
-                        stage[i].stageActive = false;
-
-                        ResetLevitation();
-                        stage[i - 1].stageActive = true;
-                        if (stage[i - 1].stageObjects.transform.childCount <2)
+                        if (stage[i - 1].stageObjects.transform.childCount < 1)
                         {
                             Instantiate(stage[i - 1].stagePrefab, stage[i - 1].stageObjects.transform);
                         }
+                        stageDownSound.Play(0);
+                        player.transform.position = new Vector3(0, player.transform.position.y, 0);
+                        stage[i].stageActive = false;
+                        Destroy(stage[i].stageObjects.gameObject.transform.GetChild(0).gameObject);
+                        ResetLevitation();
                         activeStage = i - 1;
-                        stage[i].stageObjects.SetActive(false);
-                        Destroy(stage[i].stageObjects.gameObject.transform.GetChild(1).gameObject);
                         stageMovement.MoveDown();
+                        stage[i].stageObjects.transform.GetChild(0).gameObject.SetActive(false);
+                        stage[i - 1].stageActive = true;
                     }
                 }
             }

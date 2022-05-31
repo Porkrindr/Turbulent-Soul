@@ -38,6 +38,7 @@ public class movePlayerUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerController player = other.gameObject.transform.parent.transform.parent.GetComponent<PlayerController>();
             if (GameManager.levitation >-5|| GameManager.levitation <5) {
                 GameManager.LevitationUpdate(levitationAmt);
             }
@@ -62,10 +63,11 @@ public class movePlayerUp : MonoBehaviour
                 GameManager.goodPointsCollected++;
                 Destroy(transform.parent.gameObject);
             }
-            else
+            else if (player.hitTimer<Time.time)
             {
-                possessAudio.Play(0);
+                player.hitTimer = player.noHitTime + Time.time;
                 levDown.Play();
+                possessAudio.Play();
             }
         }
     }
