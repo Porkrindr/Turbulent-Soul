@@ -1,16 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!82 &3139824056197279512
+--- !u!82 &5450244731790843934
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9008952205966594176}
+  m_GameObject: {fileID: 8541738327170661532}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fe838eafc25df7d4b897fdf9cb03b22f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 00efa7a430ad8e34c98f41fad85f1b3a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -116,17 +116,17 @@ MonoBehaviour:
   invincibleTimer: 1
   finalTime: 5
   isDefeated: 0
---- !u!82 &5450244731790843934
+--- !u!82 &3139824056197279512
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8541738327170661532}
+  m_GameObject: {fileID: 9008952205966594176}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 00efa7a430ad8e34c98f41fad85f1b3a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fe838eafc25df7d4b897fdf9cb03b22f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -276,12 +276,24 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1954877226367897018, guid: c91229d27f9a9de4493679bd409f4449, type: 3}
+      propertyPath: moveSpeed
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954877226367897018, guid: c91229d27f9a9de4493679bd409f4449, type: 3}
+      propertyPath: pauseTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954877226367897018, guid: c91229d27f9a9de4493679bd409f4449, type: 3}
+      propertyPath: riseSpeed
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954877226367897018, guid: c91229d27f9a9de4493679bd409f4449, type: 3}
       propertyPath: targetRange
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1954877226367897018, guid: c91229d27f9a9de4493679bd409f4449, type: 3}
       propertyPath: initiateTime
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8634209016755554567, guid: c91229d27f9a9de4493679bd409f4449, type: 3}
       propertyPath: levitationAmt

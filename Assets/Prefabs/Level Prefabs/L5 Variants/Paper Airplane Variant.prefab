@@ -49,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2082272768, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: rotInput.y
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2156601842375420156, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: m_RootOrder
@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2156601842375420157, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: m_Name
-      value: Paper Airplane
+      value: Paper Airplane Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8730466664673620539, guid: 93ce513f98495154490954ba3b9e6b50, type: 3}
       propertyPath: levitationAmt

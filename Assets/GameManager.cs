@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static int soulTakes;
     public static bool pauseLevity = false;
     public bool isHit;
+    public bool[] soulActive;
     public StageMovement stageMovement;
     public AudioSource stageDownSound;
     public AudioSource stageUpSound;
@@ -34,9 +35,28 @@ public class GameManager : MonoBehaviour
         public float stageRadius;
     }
     public ElevationStages[] stage;
+
+    private void Awake()
+    {
+        levitation = 0;
+        goodPoints = 0;
+        goodPointsCollected = 0;
+        soulSaves = 0;
+        soulTakes = 0;
+        pauseLevity = false;
+        isHit = false;
+        startStage = 1;
+        pauseMenu.GameIsPaused = false;
+        if (stage[1].stageObjects.transform.GetChild(0) == null)
+        {
+            Instantiate(stage[1].stagePrefab, stage[1].stageObjects.transform);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+
         player = GameObject.Find("Player");
         stageMovement = GameObject.Find("StageMaster").GetComponent<StageMovement>();
         for (int i = 0; i < stage.Length; i++)

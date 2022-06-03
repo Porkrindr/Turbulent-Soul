@@ -35,7 +35,7 @@ public class StageMovement : MonoBehaviour
             if (stageUpActive && transform.position != targetStage)
             {
                 isMoving = true;
-                transform.position = Vector3.MoveTowards(transform.position, targetStage, 2 * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, targetStage, 3 * Time.deltaTime);
                 rot += playerRot;
                 player.rotation = Quaternion.Euler(rot);
                 player.position = Vector3.zero;
@@ -46,7 +46,7 @@ public class StageMovement : MonoBehaviour
                 rot -= playerRot;
                 player.rotation = Quaternion.Euler(rot);
                 player.position = Vector3.zero;
-                transform.position = Vector3.MoveTowards(transform.position, targetStage, 2 * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, targetStage, 3 * Time.deltaTime);
             }
             else
             {
