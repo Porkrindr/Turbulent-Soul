@@ -91,6 +91,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levitationAmt: 2
   goodPoints: 1
+  gameManager: {fileID: 0}
+  killedFx: {fileID: 0}
+  saveAudio: {fileID: 0}
+  killAudio: {fileID: 0}
+  possessAudio: {fileID: 0}
+  soulSaver: 0
+  soulTaker: 0
+  isSoulLessie: 1
+  isSoulTofu: 0
   canSave: 1
   canKill: 0
   isPossessed: 0

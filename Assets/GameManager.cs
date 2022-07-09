@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public static int soulSaves;
     public static int soulTakes;
     public static bool pauseLevity = false;
+    public static bool isSoulTofuActive;
+    public static bool isSoulLessieActive;
     public bool isHit;
     public bool[] soulActive;
     public StageMovement stageMovement;
@@ -38,6 +40,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        isSoulLessieActive = true;
+        isSoulTofuActive = true;
         levitation = 0;
         goodPoints = 0;
         goodPointsCollected = 0;
@@ -154,13 +158,13 @@ public class GameManager : MonoBehaviour
 
             SceneManager.LoadScene(4);
         }
-        if(save< 2 )
+        if(!isSoulLessieActive && !isSoulTofuActive )
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         else
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
 
     } void EndingUnderworld(int save, int take)

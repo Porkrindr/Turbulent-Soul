@@ -6,6 +6,7 @@ public class movePlayerUp : MonoBehaviour
 {
     public int levitationAmt;
     public int goodPoints;
+    public GameManager gameManager;
     private ParticleSystem levUp;
     private ParticleSystem levDown;
     public ParticleSystem killedFx;
@@ -14,6 +15,8 @@ public class movePlayerUp : MonoBehaviour
     public AudioSource possessAudio;
     public int soulSaver;
     public int soulTaker;
+    public bool isSoulLessie;
+    public bool isSoulTofu;
 
     [SerializeField]
     private bool canSave;
@@ -30,6 +33,7 @@ public class movePlayerUp : MonoBehaviour
     }
     private void Start()
     {
+        gameManager = GameObject.Find("Canvas").GetComponent<GameManager>();
         levUp = GameObject.Find("UpParticle").GetComponent<ParticleSystem>();        
         levDown = GameObject.Find("DownParticle").GetComponent<ParticleSystem>();
     }
@@ -47,6 +51,14 @@ public class movePlayerUp : MonoBehaviour
             {
                 saveAudio.Play(0);
                 levUp.Play();
+                if (isSoulLessie)
+                {
+                    GameManager.isSoulLessieActive = false;
+                }
+                if (isSoulTofu)
+                {
+                    GameManager.isSoulTofuActive = false;
+                }
                 GameManager.goodPoints += goodPoints;
             }
             if (canKill)

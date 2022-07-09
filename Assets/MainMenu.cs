@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    public GameObject button1, button2;
+    public GameObject button1, button2, button3;
     public GameObject text1;
     public GameObject menuPanel,introPanel;
     public float appearTime;
@@ -26,6 +26,7 @@ public class MainMenu : MonoBehaviour
         {
             button1.SetActive(true);
             button2.SetActive(true);
+            button3.SetActive(true);
         }
         if (timer + appearTime<Time.time)
         {
